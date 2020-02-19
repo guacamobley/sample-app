@@ -69,7 +69,7 @@ Rails.application.configure do
   host = 'fierce-meadow-27752.herokuapp.com'
   config.action_mailer.default_url_options = {host: host}
   ActionMailer::Base.smtp_settings = {
-    :address        => ENV['MAILGUN_SMTTP_SERVER'],
+    :address        => ENV['MAILGUN_SMTP_SERVER'],
     :port           => ENV['MAILGUN_SMTP_PORT'],
     :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
     :password       => ENV['MAILGUN_SMTP_PASSWORD'],
