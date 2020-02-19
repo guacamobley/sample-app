@@ -69,10 +69,12 @@ Rails.application.configure do
   host = 'fierce-meadow-27752.herokuapp.com'
   config.action_mailer.default_url_options = {host: host}
   ActionMailer::Base.smtp_settings = {
-    :address        => 'smtp.sendgrid.net',
-    :port           => '587',
+    :address        => ENV['MAILGUN_SMTTP_SERVER'],
+    :port           => ENV['MAILGUN_SMTP_PORT'],
+    :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
+    :password       => ENV['MAILGUN_SMTP_PASSWORD']
     :authentication => :plain,
-    :domain         => 'heroku.com',
+    :domain         => 'fierce-meadow-27752.heroku.com',
     :enable_starttls_auto => true
   }
 
