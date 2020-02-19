@@ -72,7 +72,7 @@ Rails.application.configure do
     :address        => ENV['MAILGUN_SMTTP_SERVER'],
     :port           => ENV['MAILGUN_SMTP_PORT'],
     :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
-    :password       => ENV['MAILGUN_SMTP_PASSWORD']
+    :password       => ENV['MAILGUN_SMTP_PASSWORD'],
     :authentication => :plain,
     :domain         => 'fierce-meadow-27752.heroku.com',
     :enable_starttls_auto => true
